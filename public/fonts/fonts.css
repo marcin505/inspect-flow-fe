@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Foco";
+  font-style: normal;
+  src: url("/fonts/Foco_W_Lt.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Foco";
+  font-style: normal;
+  src: url("/fonts/Foco_W_Rg.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Foco";
+  font-style: normal;
+  src: url("/fonts/Foco_W_Rg.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Foco";
+  font-style: normal;
+  src: url("/fonts/Foco_W_Bd.woff2") format("woff2");
+  font-weight: 800;
+}

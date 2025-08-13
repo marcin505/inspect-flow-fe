@@ -1,0 +1,119 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "standard-with-typescript"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.spec.ts", "**/*.spec.tsx", "src/setup.jsx"],
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "@typescript-eslint/consistent-type-assertions": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "**/*.tsx"],
+      "rules": {
+        "@typescript-eslint/member-delimiter-style": "off"
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "@typescript-eslint/member-delimiter-style": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "rules": {
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/promise-function-async": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-floating-promises": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/self-closing-comp": "warn",
+    "import/first": "error",
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      { "allow": ["arrowFunctions"] }
+    ],
+    "multiline-ternary": "off",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "@ui/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@api-services/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@utils/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@constants/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": [
+          "external",
+          [
+            "internal",
+            "unknown",
+            "parent",
+            "sibling",
+            "index",
+            "object",
+            "type"
+          ]
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/jsx-boolean-value": "error",
+    "react/react-in-jsx-scope": "off",
+    "semi": "off",
+    "quotes": "off",
+    "@typescript-eslint/quotes": "off",
+    "react/button-has-type": "error"
+  },
+  "settings": { "react": { "version": "detect" } }
+}

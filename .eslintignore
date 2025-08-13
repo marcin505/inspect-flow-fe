@@ -1,0 +1,5 @@
+vite-env.d.ts
+tailwind.config.cjs
+vite.config.ts
+scripts/
+setup.jsx
